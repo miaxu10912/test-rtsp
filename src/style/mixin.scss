@@ -1,0 +1,73 @@
+// 复用样式
+$font-color-default: #414c62;
+$font-color-active: #2580fb;
+$font-color-placeholder: #717d95;
+$font-color-title: #2c3443;
+$font-family: Alibaba PuHuiTi;
+$flag-icon-css-path: '/assets/imgs/';
+
+// 背景图片地址和大小
+@mixin backImg($url) {
+  background-image: url(#{$flag-icon-css-path}#{$url});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+// 圆角
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+// 定位全屏
+@mixin allCover {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+// 定位：垂直水平居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// 定位：垂直居中
+@mixin vc {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// 定位：水平居中
+@mixin hc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+// 宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+// 字体大小、行高、字体（默认微软雅黑）
+@mixin font($size, $line-height, $family: 'Alibaba PuHuiTi') {
+  font: #{$size}/#{$line-height} $family;
+}
+// flex布局及子元素对齐方式
+@mixin fj($type: space-between) {
+  display: flex;
+  justify-content: $type;
+}
+// inline-flex布局及子元素对齐方式
+@mixin ifj($type: space-between) {
+  display: inline-flex;
+  justify-content: $type;
+}
+// grid
+@mixin  gridj($coltype: auto, $rowtype: auto) {
+  display: grid;
+  grid-template-columns: $coltype;
+  grid-template-rows: $rowtype;
+}
+

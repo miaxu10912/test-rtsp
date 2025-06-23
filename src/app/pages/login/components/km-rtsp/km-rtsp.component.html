@@ -1,0 +1,31 @@
+<div class="main-wrap">
+  <div class="camera-wrap" id="rtsp-wrap"></div>
+  <div class="camera-btn-wrap">
+    <img
+      src="assets/imgs/camera/icon-changeVideo.png"
+      class="changeType"
+      (click)="changePage($event)"
+    />
+    <img
+      src="assets/imgs/camera/icon-takePhoto.png"
+      (click)="takeSnapshot()"
+      class="centerBtn"
+      *ngIf="currentPage === 1"
+    />
+    <img
+      src="assets/imgs/camera/icon-startVideo.png"
+      (click)="startSaveMp4()"
+      class="centerBtn"
+      *ngIf="currentPage === 2 && !isStartRecordVideo"
+    />
+    <img
+      src="assets/imgs/camera/icon-stopVideo.png"
+      (click)="stopRecordMp4()"
+      class="centerBtn"
+      *ngIf="currentPage === 2 && isStartRecordVideo"
+    />
+    <div class="timer" *ngIf="currentPage === 2">{{ showTime }}</div>
+    <!-- <div class="btn" (click)="startLoopFrameExtraction()">开抽帧</div>
+    <div class="btn" (click)="stopLoopFrameExtraction()">停止抽帧</div> -->
+  </div>
+</div>

@@ -1,0 +1,396 @@
+06-16 17:04:10.538 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.562 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.613 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.632 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.685 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.721 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.742 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.811 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.938 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:10.990 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.009 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.027 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.046 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.082 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.169 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.419 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.473 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.510 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.527 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.633 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.669 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.687 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.705 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.742 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.761 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.771 23128 23128 I HwViewRootImpl: removeInvalidNode jank list is null
+06-16 17:04:11.780 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.831 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:11.989 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.008 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.045 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.081 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.186 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.221 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.241 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.259 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.277 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.295 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.470 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.523 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.560 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.773 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.808 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.827 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.845 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.897 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.966 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:12.985 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.056 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.091 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.109 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.128 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.216 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.344 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.380 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.398 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.469 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.523 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.556 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.574 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.664 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.770 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.789 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.809 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.828 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.847 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.868 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.888 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.912 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.934 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:13.953 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.042 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.096 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.114 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.166 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.219 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.237 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.255 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.292 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.346 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.485 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.540 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.557 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.628 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.663 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.673 23128 23128 I HwViewRootImpl: removeInvalidNode jank list is null
+06-16 17:04:14.821 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.838 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.891 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.911 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.946 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.966 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:14.984 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.035 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.054 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.107 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.127 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.231 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.249 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.303 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.340 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.360 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:04:15.360 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.429 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.447 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.501 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.536 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.608 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.662 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.751 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.769 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.787 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.859 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.879 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.932 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.968 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:15.985 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.039 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.075 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.148 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.362 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.414 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.469 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.542 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.645 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.664 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.681 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.753 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.842 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:16.880 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.006 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.024 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.060 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.132 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.185 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.291 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.313 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.473 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.506 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.528 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.582 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.671 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.743 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.755 23128 23128 I HwViewRootImpl: removeInvalidNode jank list is null
+06-16 17:04:17.763 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:17.886 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:18.216 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:18.368 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:18.766 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:18.801 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:18.822 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:18.845 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:18.881 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.034 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.069 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.105 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.125 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.229 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.316 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.352 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.370 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.406 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.443 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.481 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.534 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.606 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.643 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.714 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.733 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.821 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.876 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.895 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.931 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:19.985 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.004 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.056 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.074 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.092 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.129 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.202 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.270 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.324 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.343 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.365 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.385 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.404 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.423 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.440 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.460 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.514 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.551 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.657 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.675 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.696 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.714 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.766 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.821 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.894 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.915 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:20.984 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.003 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.022 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.074 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.113 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.149 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.288 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.324 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.344 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.443 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.510 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.543 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.629 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.701 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.755 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.774 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.792 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.829 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:21.987 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.023 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.061 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.079 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.091 23128 23128 I HwViewRootImpl: removeInvalidNode jank list is null
+06-16 17:04:22.097 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.118 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.171 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.193 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.230 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.248 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.303 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.338 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.357 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.375 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.451 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.472 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.539 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.559 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.601 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.624 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.700 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.757 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:22.775 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:23.116 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:23.150 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:24.424 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:04:26.040 23128 23128 I HiTouch_PressGestureDetector: checkDoublePointerLimit:xPoss,yPoss:1451,734
+06-16 17:04:26.086 23128 23128 W HiTouch_PressGestureDetector: action:Up,touchSlop:17,interrupted:false
+06-16 17:04:26.167 23128 23128 I Capacitor/Console: File: http://localhost/main.7bb4bcb2426f2616.js - Line 1 - Msg: 220kV界观变(工作票)1934537442957783040.docx downloadFile@@@@@@@ [object Blob]
+06-16 17:04:26.168 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: Permissions473922825, service: Permissions, action: checkPermission, actionArgs: [null]
+06-16 17:04:26.169 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: File473922826, service: File, action: resolveLocalFileSystemURI, actionArgs: ["file:\/\/\/storage\/emulated\/0\/Download"]
+06-16 17:04:26.173 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: Permissions473922827, service: Permissions, action: requestPermission, actionArgs: [null]
+06-16 17:04:26.176 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: File473922828, service: File, action: resolveLocalFileSystemURI, actionArgs: ["file:\/\/\/storage\/emulated\/0\/Download\/spdVirtual"]
+06-16 17:04:26.184 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.188 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: File473922829, service: File, action: resolveLocalFileSystemURI, actionArgs: ["file:\/\/\/storage\/emulated\/0\/Download\/spdVirtual\/220kV界观变(工作票)1934537442957783040.docx"]
+06-16 17:04:26.189 23128 23128 V Capacitor/AppPlugin: Notifying listeners for event pause
+06-16 17:04:26.189 23128 23128 D Capacitor/AppPlugin: No listeners found for event pause
+06-16 17:04:26.189 23128 23128 D Capacitor: App paused
+06-16 17:04:26.196 23128 23128 E chromium: [ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 4.179 s for first_image_paint 4.113 s
+06-16 17:04:26.213 23128 23128 I RmeSchedManager: init Rme, version is: v1.0
+06-16 17:04:26.213 23128 23128 D RtgSched: resetRtgSchedHandle failed enable:0
+06-16 17:04:26.220 23128 23128 I VRI[MainActivity]: send MSG_WINDOW_FOCUS_CHANGED msg
+06-16 17:04:26.221 23128 23128 D DecorView: showOrHideHighlightView: hasFocus=false; winMode=1; isMrgNull=true
+06-16 17:04:26.267 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.279 23128 23128 D ActivityThread: Won't deliver top position change in state=4
+06-16 17:04:26.286 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.293 23128 23128 D Capacitor: Unable to find a Capacitor plugin to handle permission requestCode, trying Cordova plugins 4
+06-16 17:04:26.294 23128 23128 D Capacitor/AppPlugin: Firing change: true
+06-16 17:04:26.294 23128 23128 V Capacitor/AppPlugin: Notifying listeners for event appStateChange
+06-16 17:04:26.294 23128 23128 D Capacitor/AppPlugin: No listeners found for event appStateChange
+06-16 17:04:26.294 23128 23128 V Capacitor/AppPlugin: Notifying listeners for event resume
+06-16 17:04:26.294 23128 23128 D Capacitor/AppPlugin: No listeners found for event resume
+06-16 17:04:26.296 23128 23128 D Capacitor: App resumed
+06-16 17:04:26.297 23128 23128 I DecorView[]: set decor visibility 0
+06-16 17:04:26.302 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:04:26.305 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eebd2d0
+06-16 17:04:26.305 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eed3f50 count: 6
+06-16 17:04:26.305 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eeb0550
+06-16 17:04:26.305 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eebfa90
+06-16 17:04:26.305 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eed7cd0
+06-16 17:04:26.305 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eed5810 count: 2
+06-16 17:04:26.305 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eed5810
+06-16 17:04:26.305 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eedc650 count: 2
+06-16 17:04:26.305 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eedc650
+06-16 17:04:26.305 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eed9a10 count: 2
+06-16 17:04:26.305 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eed9a10
+06-16 17:04:26.306 23128 29270 D FrameAwareSched: uboost uirescue, event = 1
+06-16 17:04:26.312 23128 29200 I SurfaceControl: ~SurfaceControl 0xb400007c1eed3f50
+06-16 17:04:26.317 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.318 23128 23128 E chromium: [ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 4.179 s for first_image_paint 4.113 s
+06-16 17:04:26.319 23128 23128 I VRI[MainActivity]: send MSG_WINDOW_FOCUS_CHANGED msg
+06-16 17:04:26.333 23128 23128 D DecorView: showOrHideHighlightView: hasFocus=true; winMode=1; isMrgNull=true
+06-16 17:04:26.334 23128 23128 W InputMethodManager: startInputReason = 1
+06-16 17:04:26.338 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.362 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.381 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.395 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.428 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.462 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.479 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.517 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.553 23128 23128 E chromium: [ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 4.179 s for first_image_paint 4.113 s
+06-16 17:04:26.905 23128 23128 I HiTouch_PressGestureDetector: checkDoublePointerLimit:xPoss,yPoss:994,1398
+06-16 17:04:26.911 23128 23128 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 127573608, pluginId: Haptics, methodName: selectionStart
+06-16 17:04:26.911 23128 23128 V Capacitor: callback: 127573608, pluginId: Haptics, methodName: selectionStart, methodData: {}
+06-16 17:04:26.913 23128 23128 I Capacitor/Console: File: http://localhost/ - Line 228 - Msg: undefined
+06-16 17:04:26.949 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:26.962 23128 23128 W HiTouch_PressGestureDetector: action:Up,touchSlop:17,interrupted:false
+06-16 17:04:26.967 23128 23128 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 127573609, pluginId: Haptics, methodName: selectionEnd
+06-16 17:04:26.967 23128 23128 V Capacitor: callback: 127573609, pluginId: Haptics, methodName: selectionEnd, methodData: {}
+06-16 17:04:26.971 23128 23128 I Capacitor/Console: File: http://localhost/main.7bb4bcb2426f2616.js - Line 1 - Msg: file:///storage/emulated/0/Download/spdVirtual/ 220kV界观变(工作票)1934537442957783040.docx [object Blob] 22222
+06-16 17:04:26.972 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: File473922830, service: File, action: resolveLocalFileSystemURI, actionArgs: ["file:\/\/\/storage\/emulated\/0\/Download\/spdVirtual\/"]
+06-16 17:04:26.977 23128 23128 I Capacitor/Console: File: http://localhost/ - Line 228 - Msg: undefined
+06-16 17:04:26.979 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: File473922831, service: File, action: getFile, actionArgs: ["http:\/\/localhost\/__cdvfile_sdcard__\/Download\/spdVirtual\/","220kV界观变(工作票)1934537442957783040.docx",{"create":true,"exclusive":false}]
+06-16 17:04:27.020 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: File473922832, service: File, action: getFileMetadata, actionArgs: ["http:\/\/localhost\/__cdvfile_sdcard__\/Download\/spdVirtual\/220kV%E7%95%8C%E8%A7%82%E5%8F%98(%E5%B7%A5%E4%BD%9C%E7%A5%A8)1934537442957783040.docx"]
+06-16 17:04:27.033 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.035 23128 23128 V Capacitor/Plugin: To native (Cordova plugin): callbackId: File473922833, service: File, action: write, actionArgs: ["http:\/\/localhost\/__cdvfile_sdcard__\/Download\/spdVirtual\/220kV%E7%95%8C%E8%A7%82%E5%8F%98(%E5%B7%A5%E4%BD%9C%E7%A5%A8)1934537442957783040.docx","UEsDBBQACAgIAIGI0FoAAAAAAAAAAAAAAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbLVVy27CMBD8lcjXKjH0UFUVgUMfx5YDlXp17Q2x6kdkLxT+vpsEcgBSUTW5RLFndma8tuXZYmdNsoUQtXc5m2YTloCTXmm3ztn76iW9Z0lE4ZQw3kHO9hDZYj5b7SuICdW6mLMSsXrgPMoSrIiZr8ARUvhgBdIwrHkl5JdYA7+dTO649A7BYYq1BpvPnqAQG4PJYztfS+dMVJXRUiDF4lunTkTTg2AWwDScWOoq3hCBJc87UmmXQ2hk\/AqH08J6THVv1JigFfwpmi8KLUF5ubFUkslNRG8\/rFkGIgbUcMi5FAFfhSVB3nG4RrA1MU6zATNAvTIFKq36MxC5MeYk\/S\/v49ZIH+Aqw5o45Grbbl5n3VCHNP\/2QZGzhBjpClmTdYgV2p0lqem8o4yZgw6A83ihGU2EIzpqhIK0VuLTwOUMHTxyCI+\/NKKDRw1RglAQLidosUHv\/5l\/BET66+nBER03Au5N3ya02JD2SE9Tz7FroPbbNZ0379v8B1BLBwiiPQrkegEAAB4HAABQSwMEFAAICAgAgYjQWgAAAAAAAAAAAAAAAAsAAABfcmVscy8ucmVsc62Sy2oDMQxFf8Von\/EkKaWUONmUQHalpB8gbM2Dji1jK23y93Uf0A5MYQpZCsnnHglvdmc\/qFdKuedgYFnVoChYdn1oDTwf94s7UFkwOBw4kIELZdhtN080oJQnuetjVoURsoFOJN5rnW1HHnPFkULpNJw8SilTqyPaF2xJr+r6VqffDBgz1cEZSAe3BHXE1JIYcGwfE8esMcaqcEvnEmlOKjdNb+mB7clTkIlwTWeh4MgtYkmgJH3ZUk8brSaMLCf6n9Lfh9CeBB0KflJnCK2nhE5Z2F\/7Sl\/UGUo3P0pvnJx239BrC40nPmz06GNu3wFQSwcIpMAox\/EAAADfAgAAUEsDBBQACAgIAIGI0FoAAAAAAAAAAAAAAAATAAAAY3VzdG9tWG1sL2l0ZW0xLnhtbJ2PQQuCQBCF70H\/YZl77moQIa4esqBbUJ1D1jUFnV2cNe3fJ0hhhy6928yb7zEvSoamZg\/dUmVQgu8JYBqVySu8S7heDqstMHIZ5lltUEt4aoIkXi4iClVHzjRp5jI2hiBJKJ2zIed933u9JU8hN0VRKZ0a1TUaHQ+Ev+ajtfugMLHhn3QcTV+ctXKn1lj6XvA44r8OSrsf3Hw8YmEY2SqXcBvEqBv5ItjALOTN8Hn7+AVQSwcIGdh\/K7IAAABFAQAAUEsDBBQACAgIAIGI0FoAAAAAAAAAAAAAAAAeAAAAY3VzdG9tWG1sL19yZWxzL2l0ZW0xLnhtbC5yZWxzjc\/BisIwEAbgVwlzt2n3sIg09SJCb8ui4DWk0zbYZEJmFH17gycFDx5nhv\/7mXZ7C4u6YmZP0UBT1aAwOhp8nAwcD\/vVGhSLjYNdKKKBOzJsu\/YfFyslwrNPrIoR2cAskjZas5sxWK4oYSyXkXKwUsY86WTd2U6of+r6V+dXA95N1Q8Gcj80oA42TygGvGD4y5S4qYpa9veE33TSOHqHO3KXgFE+VGt3YaFwCsuTB921+u2\/7gFQSwcIbOE4H7YAAAAmAQAAUEsDBBQACAgIAIGI0FoAAAAAAAAAAAAAAAAYAAAAY3VzdG9tWG1sL2l0ZW1Qcm9wczEueG1sZY9Ba4QwEIXvhf6HMHdNomvVRV3YtcJeSwu9hjjuBkwiJtaW0v\/ebAuF7p6GN4\/53rxq965H8oazU9bUwGMGBI20vTKnGl6eu6gA4rwwvRitwRo+0MGuub+rerfthRfO2xmPHjUJCxXmsa3hc8\/LPO\/yNkpYto82rOBRydNDlBbthj\/mWdaVyReQkG0CxtVw9n7aUurkGbVwsZ3QBHOwsxY+yPlE7TAoia2Vi0bjacLYA5VLiNeveoTm8s\/v9RMO7r+8vLbM6i9lXdd4nVwszS2VpzRYhx9wG\/oBbSp6xabX3ZtvUEsHCGNDe0XkAAAARwEAAFBLAwQUAAgICACBiNBaAAAAAAAAAAAAAAAAEAAAAGRvY1Byb3BzL2FwcC54bWydUctuwjAQvPcrotwTP5LwkjGioZwqFYlQjshyNsRqYluxi+jf1y1qSa+97c7YM7O7bHXtu+gCg1NGL2OS4jgCLU2t9HkZH6ptMotX\/IHtBmNh8ApcFD5ot4xb7+0CISdb6IVLA60D05ihFz60wxmZplESNka+96A9ohhPEFw96BrqxP4KxjfFxcX\/V7Q28iufe60+bNDjbCfO4Dhl6Fawoxlqx0lOpgzdala2YhDSh8E5mWfh6QhglfGiq1QPnDB0b9heig7KYMUb0Tlg6A6wZ6Xf3MFWZiM8\/PB\/wZHpUfl2b4UM6TKaT8b2I4qtre2UFD4chx93++jle\/oToWm4VBqCY3rakqeMTh\/LhE7mZZJnRZ2sSUETXJRFjmcY03LN0Fgp7OV3+\/wTUEsHCG1FcdwqAQAAAgIAAFBLAwQUAAgICACBiNBaAAAAAAAAAAAAAAAAEQAAAGRvY1Byb3BzL2NvcmUueG1sfZLdboMgGIZvxXCugLbdStQm29KjNVmyLlt20hD8alkVCbDa3tluYPc1tK37zc6Q9+XJwyfpbF9XwQ6MlY3KEI0ICkCJppCqzNDDch5eosA6rgpeNQoydACLZnkqNBONgTvTaDBOgg08R1kmdIY2zmmGsRUbqLmNfEP5cN2Ymjv\/aUqsudjyEnBMyATX4HjBHccdMNQDEZ2QhRiQ+tVUPaAQGCqoQTmLaUTxZ9eBqe2fB\/pkaO6tHFpt20Zt0ve8EcVPi9v7Xj6Uqru7AJSnJzQTBriDIvAA5g7aj+ScPCbXN8s5ymMSJyGZhmS0pJSRMSPkOcU\/znfA47oxuR9tWfAXqSglSVcdkm7QFbdu4f\/IWkJxdci3UDe7UIsU\/84Gy\/q097\/mKKRxSCed5jhh8fSL5hnQezrpKshXe0LIxer9rTc87vUS319C\/gFQSwcIF8VS80wBAABUAgAAUEsDBBQACAgIAIGI0FoAAAAAAAAAAAAAAAATAAAAZG9jUHJvcHMvY3VzdG9tLnhtbLWSXU\/CMBSG7\/0VS++7td2KdNlG9oUhmqCIGL0xy9bB4rrNrYDE+N8tIhAuvPHjsjnvefrkzXEGr6LUVrztirpyAdYR0HiV1llRzV1wNx3CPhh4Z851Wze8lQXvNLVQdS5YSNnYhtGlCy6STlfjSk3yuhWJVM92btR5XqQ8qtOl4JU0CEI9I112shawOeDAjmev5E+RWZ1u7brZdNMonud8wTdaLmSRueAtomEUUUQhiVkIMcIBZCY7h6iPEAlIOGR+\/A60ZhsmQKsSwV0QTsaKtZJ22aw72Xrrl\/IquadVSpjIwuBmEj\/Ms4v+fIaD6Sh6XjvGMesYe4df2pgHm5Ynkmc7o7wouSwE9wgiFkQYYjrF2Lawjejjp8ch8Wcm1t7k8nas6s6WqQyWRZnNeHtSE0GUQEx0dUk6ZiYi\/9IL3duMwtnJ99E5MhkiijWMLd\/Cvm\/FVsgo7QXEJH32hM3vhIzjjXsfUEsHCP9rQRpnAQAAFwMAAFBLAwQUAAgICACBiNBaAAAAAAAAAAAAAAAAEQAAAHdvcmQvZG9jdW1lbnQueG1s7X3rd9Nmtvf396\/I4v16aHS\/cKacJetypmt1zts1Pafz8SyTGOLTEOc4DtB
+06-16 17:04:27.039 23128 31433 I Environment: path /storage/emulated/0 state is mounted
+06-16 17:04:27.055 23128 23128 V Capacitor/AppPlugin: Notifying listeners for event pause
+06-16 17:04:27.055 23128 23128 D Capacitor/AppPlugin: No listeners found for event pause
+06-16 17:04:27.056 23128 23128 D Capacitor: App paused
+06-16 17:04:27.071 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.071 23128 23128 E chromium: [ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 4.179 s for first_image_paint 4.113 s
+06-16 17:04:27.094 23128 23128 I VRI[MainActivity]: send MSG_WINDOW_FOCUS_CHANGED msg
+06-16 17:04:27.094 23128 23128 D DecorView: showOrHideHighlightView: hasFocus=false; winMode=1; isMrgNull=true
+06-16 17:04:27.100 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.134 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.137 23128 29306 I SurfaceControl: SurfaceControl 0xb400007c1eea2750
+06-16 17:04:27.152 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eebfa90 count: 2
+06-16 17:04:27.152 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eebfa90
+06-16 17:04:27.152 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eed7cd0 count: 2
+06-16 17:04:27.152 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eed7cd0
+06-16 17:04:27.152 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eeb0550 count: 2
+06-16 17:04:27.152 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eeb0550
+06-16 17:04:27.163 23128 29306 I SurfaceControl: SurfaceControl 0xb400007c1eea0c50
+06-16 17:04:27.163 23128 29306 I SurfaceControl: SurfaceControl 0xb400007c1eecd7d0
+06-16 17:04:27.163 23128 29306 I SurfaceControl: SurfaceControl 0xb400007c1eeb5dd0
+06-16 17:04:27.170 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.176 23128 23128 D ActivityThread: Won't deliver top position change in state=4
+06-16 17:04:27.176 23128 23128 D Capacitor: Unable to find a Capacitor plugin to handle permission requestCode, trying Cordova plugins 5
+06-16 17:04:27.177 23128 23128 D Capacitor/AppPlugin: Firing change: true
+06-16 17:04:27.177 23128 23128 V Capacitor/AppPlugin: Notifying listeners for event appStateChange
+06-16 17:04:27.178 23128 23128 D Capacitor/AppPlugin: No listeners found for event appStateChange
+06-16 17:04:27.178 23128 23128 V Capacitor/AppPlugin: Notifying listeners for event resume
+06-16 17:04:27.178 23128 23128 D Capacitor/AppPlugin: No listeners found for event resume
+06-16 17:04:27.179 23128 23128 D Capacitor: App resumed
+06-16 17:04:27.180 23128 23128 I DecorView[]: set decor visibility 0
+06-16 17:04:27.187 23128 29270 D FrameAwareSched: uboost uirescue, event = 1
+06-16 17:04:27.191 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eeb0550
+06-16 17:04:27.191 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eebd2d0 count: 7
+06-16 17:04:27.191 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eed7cd0
+06-16 17:04:27.191 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eebfa90
+06-16 17:04:27.191 23128 23128 I SurfaceControl: SurfaceControl 0xb400007c1eed9a10
+06-16 17:04:27.192 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eea2750 count: 2
+06-16 17:04:27.192 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eea2750
+06-16 17:04:27.194 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.194 23128 23128 I HwViewRootImpl: removeInvalidNode all the node in jank list is out of time
+06-16 17:04:27.195 23128 23128 E Capacitor/Console: File: http://localhost/main.7bb4bcb2426f2616.js - Line 1 - Msg: ERROR Error: Uncaught (in promise): ProgressEvent: {"type":"error","bubbles":false,"cancelBubble":false,"cancelable":false,"lengthComputable":false,"loaded":0,"total":0,"target":{"fileName":"","length":0,"localURL":"http://localhost/__cdvfile_sdcard__/Download/spdVirtual/220kV%E7%95%8C%E8%A7%82%E5%8F%98(%E5%B7%A5%E4%BD%9C%E7%A5%A8)1934537442957783040.docx","position":0,"readyState":2,"result":null,"error":{"code":2},"onwritestart":null,"onprogress":null,"onwriteend":null,"onabort":null}}
+06-16 17:04:27.195 23128 23128 I VRI[MainActivity]: send MSG_WINDOW_FOCUS_CHANGED msg
+06-16 17:04:27.195 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eed7cd0 count: 2
+06-16 17:04:27.195 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eed7cd0
+06-16 17:04:27.196 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eed9a10 count: 2
+06-16 17:04:27.196 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eed9a10
+06-16 17:04:27.196 23128 23128 I SurfaceControl: nativeRelease 0xb400007c1eebfa90 count: 2
+06-16 17:04:27.196 23128 23128 I SurfaceControl: ~SurfaceControl 0xb400007c1eebfa90
+06-16 17:04:27.196 23128 23128 I RmeSchedManager: init Rme, version is: v1.0
+06-16 17:04:27.196 23128 23128 I RtgSchedEvent: current pid:23128 AppType:-1
+06-16 17:04:27.199 23128 29189 I SurfaceControl: ~SurfaceControl 0xb400007c1eebd2d0
+06-16 17:04:27.199 23128 23128 D DecorView: showOrHideHighlightView: hasFocus=true; winMode=1; isMrgNull=true
+06-16 17:04:27.201 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:04:27.203 23128 23128 W InputMethodManager: startInputReason = 1
+06-16 17:04:27.216 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.232 23128 29270 D FrameAwareSched: uboost uirescue, event = 1
+06-16 17:04:27.243 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.417 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:04:27.428 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.444 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.481 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.495 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.500 23128 29270 D FrameAwareSched: uboost uirescue, event = 1
+06-16 17:04:27.508 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.525 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.561 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:27.678 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:29.678 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:29.705 23128 29270 D FrameAwareSched: uboost uirescue, event = 1
+06-16 17:04:29.762 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:29.829 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:29.895 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:29.915 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:30.027 23128 29270 D FrameAwareSched: uboost uirescue, event = 0
+06-16 17:04:30.443 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:04:33.489 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:04:36.508 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:05:09.738 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:05:12.778 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+^A^A06-16 17:05:33.922 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange
+06-16 17:05:36.952 23128 29256 V Capacitor/NetworkPlugin: Notifying listeners for event networkStatusChange

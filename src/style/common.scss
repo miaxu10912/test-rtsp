@@ -1,0 +1,812 @@
+@import "./mixin.scss";
+@import "./px2vw.scss";
+@import "./angular-tree-component.scss";
+// /* 定义设计稿的宽度为750 */
+
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// /* 移动端的适配，借助于vw、vh */
+// html {
+//   font-size:13.333333333vw;  /* 13.333333333% * 750 = 100 px */
+// }
+
+// body {
+//   font-size: 14px;
+//   /* max-width: 750px;
+//   margin: 0 auto; */
+// }
+
+// /* 使用媒体查询 */
+// /* 当屏幕宽度超过750px时，设置html的字体大小为100px */
+// @media screen and (min-width=750px) {
+//   html {
+//       font-size: 100px;
+//   }
+// }
+
+/* 对屏幕大小划分了html不同的font-size */
+
+/* @media screen and (min-width: 320px) {html{font-size:50px;}}
+@media screen and (min-width: 360px) {html{font-size:56.25px;}}
+@media screen and (min-width: 375px) {html{font-size:58.59375px;}}
+@media screen and (min-width: 400px) {html{font-size:62.5px;}}
+@media screen and (min-width: 414px) {html{font-size:64.6875px;}}
+@media screen and (min-width: 440px) {html{font-size:68.75px;}}
+@media screen and (min-width: 480px) {html{font-size:75px;}}
+@media screen and (min-width: 520px) {html{font-size:81.25px;}}
+@media screen and (min-width: 560px) {html{font-size:87.5px;}}
+@media screen and (min-width: 600px) {html{font-size:93.75px;}}
+@media screen and (min-width: 640px) {html{font-size:100px;}}
+@media screen and (min-width: 680px) {html{font-size:106.25px;}}
+@media screen and (min-width: 720px) {html{font-size:112.5px;}}
+@media screen and (min-width: 760px) {html{font-size:118.75px;}}
+@media screen and (min-width: 800px) {html{font-size:125px;}}
+@media screen and (min-width: 960px) {html{font-size:150px;}} */
+
+/* 公共样式 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+input,
+button,
+form,
+fieldset,
+legend,
+footer,
+span,
+header,
+section,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: $font-color-default;
+  font-family: $font-family;
+}
+
+img {
+  vertical-align: middle;
+}
+
+#pageFull,
+#modalFull {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+#pageFull {
+  z-index: 50;
+}
+
+#modalFull {
+  z-index: 39999;
+}
+
+[tabindex] {
+  outline: none !important;
+}
+
+:focus {
+  outline: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-vc {
+  @extend .flex;
+  align-items: center;
+}
+
+/* flex布局：水平垂直居中 */
+.flex-center {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  @extend .flex;
+  flex-wrap: wrap;
+}
+
+/* 清除浮动 */
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 头部导航功能区 */
+.header_btn-content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  align-items: center;
+
+  .fun-item {
+    text-align: center;
+
+    img {
+      width: pxToVw(98px);
+      height: pxToVw(121px);
+    }
+
+    p {
+      margin-top: pxToVw(32px);
+      color: $font-color-title;
+      font-size: pxToVw(32px);
+      font-weight: 400;
+      letter-spacing: pxToVw(6px);
+    }
+  }
+
+  .fun-item + .fun-item {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: pxToVw(1px);
+      height: 100%;
+      background: #a0a0a0;
+      opacity: 0.37;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+/* 模块首页内容展示区 */
+.main-content {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+/* 普通页面内容展示区 */
+.page-content {
+  width: 100%;
+  height: 100%;
+  padding: pxToVw(20px) 3.2%;
+  overflow-y: auto;
+}
+
+.page-content__list {
+  width: 100%;
+  height: 100%;
+  padding: pxToVw(120px) pxToVw(88px) pxToVw(20px);
+  overflow-y: auto;
+}
+
+.page-content__table {
+  width: 100%;
+  height: 100%;
+  padding: pxToVw(60px) pxToVw(88px) pxToVw(20px);
+  overflow-y: auto;
+}
+
+/* 树形列表、普通列表页面 */
+.list-content {
+  background: #fff;
+  box-shadow: 0 pxToVw(9px) pxToVw(70px) 0 rgba(84, 126, 213, 0.05);
+  border-radius: pxToVw(8px);
+  padding: pxToVw(10px) pxToVw(18px) pxToVw(10px) 0;
+}
+
+/* 普通列表样式 */
+.list-content .list-item {
+  padding: 0 pxToVw(16px) 0 0;
+  font-weight: 400;
+  font-family: $font-family;
+
+  > .list-item-index {
+    width: pxToVw(110px);
+    text-align: center;
+    margin-right: pxToVw(50px);
+  }
+
+  > .list-item-info {
+    overflow: hidden;
+    flex: 1;
+  }
+
+  &.list-header {
+    height: pxToVw(150px);
+    color: $font-color-default;
+    font-size: pxToVw(34px);
+    background: #f9fbff;
+  }
+
+  &.list-info {
+    height: pxToVw(128px);
+    font-size: pxToVw(30px);
+    color: #6d7583;
+  }
+
+  &.list-item_actived {
+    color: #2580fb;
+  }
+
+  &.list-info:nth-child(odd) {
+    background: #f9fbfe;
+  }
+}
+
+.header-content_ion {
+  background: #fff;
+}
+
+/* 下拉控件区域 */
+.select-content {
+  padding: pxToVw(65px) pxToVw(62px) pxToVw(48px);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: pxToVw(2px);
+    background: #f0f0f0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* 功能首页样式（非模型可视化） */
+.select-content_func {
+  margin-top: pxToVw(48px);
+}
+
+/* 搜索框 */
+.key-search {
+  padding: pxToVw(10px) pxToVw(24px) pxToVw(10px) pxToVw(42px);
+  width: 100%;
+  height: 100%;
+  background: #f5f9fe;
+  border-radius: pxToVw(35px);
+  font-size: pxToVw(34px);
+
+  .input-item {
+    flex: 1;
+    background: none;
+    line-height: pxToVw(70px);
+    color: $font-color-default;
+  }
+
+  .search-clear {
+    color: #929eb5;
+    font-size: pxToVw(34px);
+  }
+
+  input::-webkit-input-placeholder {
+    color: $font-color-placeholder;
+  }
+
+  input::-moz-placeholder {
+    color: $font-color-placeholder;
+  }
+
+  input:-moz-placeholder {
+    color: $font-color-placeholder;
+  }
+
+  input:-ms-input-placeholder {
+    color: $font-color-placeholder;
+  }
+}
+
+/* 自定义按钮 */
+.fun-btn {
+  height: pxToVw(70px);
+  line-height: pxToVw(70px);
+  border-radius: pxToVw(35px);
+  padding: 0 pxToVw(44px);
+  font-size: pxToVw(32px);
+  letter-spacing: pxToVw(1px);
+
+  img.fun-btn-icon {
+    height: pxToVw(44px);
+    margin-right: pxToVw(12px);
+  }
+
+  &.fun-btn__primary {
+    background: #2580fb;
+    color: #fff;
+  }
+
+  &.fun-btn__default {
+    background: #fff;
+    color: #2580fb;
+    border: pxToVw(1px) solid #2580fb;
+  }
+
+  &.fun-btn__outline {
+    background: #fff;
+    color: #3f7eff;
+    border: pxToVw(1px) solid #3f7eff;
+  }
+}
+
+.fun-btn + .fun-btn {
+  margin-left: pxToVw(36px);
+}
+
+/* 图形外容器 */
+.diagram-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 全局 ionic控件样式修改 */
+.ion-app {
+  background-color: #fff;
+}
+
+html.ios ion-modal ion-toolbar {
+  padding: 0;
+}
+
+ion-button[name="btnContent"].fun-header-btn {
+  --color: #fff !important;
+
+  img.setting {
+    width: pxToVw(42px);
+    height: pxToVw(42px);
+    margin-left: pxToVw(20px);
+  }
+
+  > .fun-header-btn_label {
+    letter-spacing: 1px;
+    font-size: pxToVw(30px);
+    font-weight: 400;
+  }
+
+  > .fun-header-btn_label__normal {
+    color: $font-color-default;
+  }
+}
+
+/* 普通页面返回按钮 */
+ion-button.custom-icon-back {
+  img {
+    width: pxToVw(50px);
+    height: pxToVw(50px);
+  }
+}
+
+/* 模态框 */
+ion-modal.station-modal,
+ion-modal.custom-modal,
+ion-modal#list-modal_graph {
+  --width: 100%;
+  --height: 100%;
+}
+
+ion-modal.custom-menu-modal {
+  --width: 100%;
+  --height: 90%;
+
+  &::part(content) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+ion-content {
+  --keyboard-offset: 0px;
+}
+
+ion-modal.custom-datetime-modal {
+  --backdrop-opacity: var(--ion-backdrop-opacity, 0.56);
+  // --max-width: 650px;
+  // --min-width: 375px;
+  // --width: auto;
+  // --min-height: auto;
+  // --height: auto;
+  --max-height: 450px;
+  --border-radius: 8px 8px 0 0;
+
+  &::part(content) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+ion-modal.add-element-modal,
+ion-modal.edit-content-modal,
+ion-modal.back-confirm-modal {
+  --width: fit-content;
+  --min-width: 250px;
+  --height: fit-content;
+  --border-radius: 10px;
+}
+/* 当屏幕宽度小于等于1300px时，隐藏元素 */
+@media screen and (max-width: 600px) {
+  ion-modal.voice-content-modal {
+    --width: 80%;
+    --min-width: 250px;
+    --height: 400px;
+    --border-radius: 6px;
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    --min-heigh: 42vh;
+  }
+  .text-input {
+    background-color: #f6f6f6;
+    padding: 0 10px;
+    margin-bottom: 1vh;
+    overflow: scroll;
+    height: 100px;
+  }
+}
+
+/* 当屏幕宽度大于等于1301px时，显示元素 */
+@media screen and (min-width: 601px) {
+  ion-modal.voice-content-modal {
+    --width: 80%;
+    --min-width: 250px;
+    --height: 500px;
+    --border-radius: 6px;
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    --min-heigh: 42vh;
+  }
+  .con .text-input {
+    background-color: #f6f6f6;
+    padding: 0 10px;
+    margin-bottom: 2vh;
+    max-height: 15vh;
+    overflow: auto;
+    height: 10vh;
+  }
+}
+ion-modal.add-element-modal {
+  .add-element-select {
+    ion-select {
+      background-color: #f6f6f6;
+      border-radius: pxToVw(10px);
+    }
+  }
+}
+
+/* 下拉选择弹窗 */
+ion-alert.custom-select_alert {
+  --min-width: 50%;
+  --max-width: 80%;
+  --max-height: 80%;
+  --backdrop-opacity: 0.56;
+  --background: #fff;
+
+  /* 下拉选择弹窗标题 */
+  .alert-head h2 {
+    color: $font-color-title;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: $font-family;
+    letter-spacing: pxToVw(6px);
+  }
+
+  /* 下拉选择选项 */
+  .alert-radio-group {
+    max-height: calc(100vh - 300px);
+    padding: pxToVw(10px) 8%;
+    border: none;
+  }
+
+  button.alert-radio-button {
+    height: pxToVw(98px);
+  }
+
+  button.alert-radio-button + button.alert-radio-button {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: pxToVw(1px);
+      background: #e5e5e5;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  button.alert-radio-button .alert-button-inner {
+    text-align: center;
+    font-size: pxToVw(40px);
+
+    > .alert-radio-icon {
+      display: none;
+    }
+
+    > .alert-radio-label {
+      color: #4a5467;
+    }
+  }
+
+  button.alert-radio-button.is-checked {
+    .alert-radio-label {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        right: 0px;
+        content: "";
+        background: url("../assets/images/icon-check.png");
+        width: pxToVw(40px);
+        height: pxToVw(40px);
+        background-size: cover;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  button[aria-checked="true"] .alert-radio-label {
+    color: $font-color-active !important;
+  }
+
+  /* 下拉选择弹窗按钮 */
+  .alert-button-group {
+    padding: pxToVw(20px) pxToVw(8px);
+  }
+
+  button.alert-button {
+    border: none;
+    font-size: pxToVw(40px);
+    font-weight: 400;
+    color: $font-color-active;
+  }
+}
+
+/* 提示框 */
+ion-alert.custom-alert-waring,
+ion-alert.custom-alert-input {
+  --background: #fff;
+
+  .alert-wrapper {
+    padding: 8px 12px;
+  }
+
+  .alert-head h2 {
+    margin: 0;
+    color: $font-color-title;
+    font-family: $font-family;
+    letter-spacing: 2px;
+  }
+
+  .alert-message {
+    padding: 16px;
+  }
+
+  .alert-input-group {
+    padding-bottom: 12px;
+
+    .alert-input {
+      border-color: #e5e5e5;
+    }
+  }
+
+  button.alert-button {
+    border: none;
+    font-weight: 400;
+    color: $font-color-active;
+  }
+}
+
+ion-alert.custom-alert-one {
+  .alert-message {
+    font-size: 16px;
+  }
+
+  button.alert-button {
+    border: none;
+    font-weight: 400;
+    color: $font-color-active;
+  }
+}
+
+/* 自定义抽屉 */
+ion-menu.custom-side-menu {
+  --width: 92%;
+  --background: #000;
+
+  &::part(backdrop) {
+    background-color: #1b1b1b;
+  }
+
+  &::part(container) {
+    border-radius: pxToVw(40px) 0 0 pxToVw(40px);
+  }
+}
+
+ion-toolbar.menu__header {
+  --background: none;
+  --padding-top: 1.25vw;
+  --padding-bottom: 0.7vw;
+}
+
+ion-button.menu-back {
+  height: 100%;
+  margin-right: pxToVw(50px);
+
+  img {
+    width: pxToVw(80px);
+    height: pxToVw(80px);
+  }
+}
+
+.custom-menu__header {
+  background: #fff;
+
+  h1 {
+    margin-left: pxToVw(80px);
+    color: #2c3443;
+    font-size: pxToVw(60px);
+    font-weight: 400;
+    position: relative;
+  }
+
+  h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -pxToVw(30px);
+    width: pxToVw(10px);
+    height: pxToVw(80px);
+    background: #2580fb;
+    border-radius: pxToVw(5px);
+  }
+}
+
+.custom-menu__content {
+  padding: pxToVw(28px) pxToVw(30px) pxToVw(30px);
+  width: 100%;
+  height: 100%;
+
+  #iframe {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: pxToVw(3px) solid #eeeeee;
+    // border: 0;
+  }
+}
+
+ion-input.km-custom-input,
+ion-textarea.km-custom-textarea {
+  --background: #f9fbfe;
+  --color: #414c62;
+  --placeholder-color: #929eb5;
+  --padding-start: 2.916666vw;
+  border-radius: pxToVw(35px);
+  height: 100%;
+  font-size: pxToVw(34px);
+}
+
+@for $i from 0 through 36 {
+  .screen#{$i} {
+    margin: 16px 0;
+    width: 100%;
+    height: 640px;
+    border: pxToVw(1px) dashed #f0f0f0;
+  }
+}
+div[split-name$="wire"] {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  .top-container,
+  .chain-container {
+    flex: 1;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .top-container {
+    border-bottom: pxToVw(1px) solid #f0f0f0;
+  }
+}
+div[split-name$="netwire"] {
+  height: 320px !important;
+  display: flex;
+  justify-items: center;
+  .net-container {
+    flex: 1;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+// 屏位布置图
+.cubicle-desc {
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+/* 当屏幕宽度小于 600px 时应用以下样式 */
+@media screen and (max-width: 680px) {
+  ion-alert.custom-select_alert {
+    --min-width: 50%;
+    --max-width: 85vw;
+  }
+  .alert-wrapper {
+    max-width: 85vw;
+    /* 下拉选择选项 */
+    .alert-radio-group {
+      width: 85vw;
+      box-sizing: border-box;
+    }
+    button.alert-radio-button {
+      height: pxToVw(110px) !important;
+    }
+    .alert-radio-label {
+      font-size: pxToVw(54px) !important;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      box-sizing: border-box;
+    }
+    .alert-button {
+      font-size: pxToVw(54px) !important;
+    }
+  }
+}

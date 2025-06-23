@@ -1,0 +1,12 @@
+<ion-content>
+  <div class="main-content">
+    <div class="top-wrap">
+      <app-km-rtsp
+        (rtspEmit)="cameraEmit($event)"
+        #rtspContainer
+        [rtspSetting]="rtspSettings"
+      ></app-km-rtsp>
+    </div>
+    <div class="bottom-wrap">首页下</div>
+  </div>
+</ion-content>

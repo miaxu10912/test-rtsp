@@ -1,0 +1,7 @@
+{
+  "name": "spdVirtualApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
