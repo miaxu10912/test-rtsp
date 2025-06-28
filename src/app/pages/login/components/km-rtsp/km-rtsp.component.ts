@@ -55,14 +55,12 @@ export class KmRtspComponent implements OnInit {
 
   }
   async ngOnChanges(changes: SimpleChanges) {
-    console.log(this.rtspSetting, '+++rtspSettingrtsp')
     if (this.rtspSetting) {
       this.rtspUrl = `rtsp://${this.rtspSetting.rtspIp}/live/camera`
     }
   }
   ngOnInit() { }
   changePage(e: any) {
-    console.log(e, '+++changePage')
     if (this.isStartRecordVideo) {
       this.commonSer.showToast('正在录制中');
       return;
@@ -78,7 +76,6 @@ export class KmRtspComponent implements OnInit {
   }
 
   async takeSnapshot() {
-
     try {
       // 使用当前时间戳作为文件名
       const timestamp = new Date().getTime();
@@ -86,7 +83,6 @@ export class KmRtspComponent implements OnInit {
       const result = await RtspView.saveJpg({
         directUrl: url
       });
-      console.log(result, '===result拍照')
       if (result.success) {
         this.commonSer.showToast('截图已保存到下载文件夹');
       } else {
@@ -96,8 +92,6 @@ export class KmRtspComponent implements OnInit {
       console.error('截图失败', error);
       this.commonSer.showToast('截图保存失败');
     }
-
-
   };
   async stopStream() {
     try {
@@ -109,20 +103,32 @@ export class KmRtspComponent implements OnInit {
     }
   };
   async startStream() {
-
     const videoWidth = this.rtspSetting.width || 1920;  // 默认宽度
     const videoHeight = this.rtspSetting.height || 1080; // 默认高度
     const videoFps = this.rtspSetting.fps || 30;      // 默认帧率
 
+    // 等待容器渲染完成
+    await this.waitForContainer();
+
     // 自动获取预览容器的位置信息
     const previewContainer = document.getElementById("rtsp-wrap");
     if (!previewContainer) {
-      console.log("错误: 找不到预览容器元素");
+      console.error("错误: 找不到预览容器元素");
       return;
     }
 
     // 获取容器在页面中的位置
     const containerRect = previewContainer.getBoundingClientRect();
+
+    // 检查容器是否有有效的尺寸
+    if (containerRect.width === 0 || containerRect.height === 0) {
+      console.warn("容器尺寸为0，等待重新渲染");
+      // 等待一下再试
+      setTimeout(() => {
+        this.startStream();
+      }, 500);
+      return;
+    }
 
     // 计算滚动偏移量
     const scrollX = window.scrollX || window.pageXOffset || document.documentElement.scrollLeft;
@@ -140,12 +146,6 @@ export class KmRtspComponent implements OnInit {
     // 添加纠正偏移量 - 根据实际情况调整顶部位置
     const topOffset = -20 * devicePixelRatio; // 向上偏移20像素的物理像素值
 
-    console.log(`开始拉流: ${this.rtspUrl}, 分辨率: ${videoWidth}x${videoHeight}, 帧率: ${videoFps}`);
-    console.log(`容器位置: left=${containerRect.left}, top=${containerRect.top}, right=${containerRect.right}, bottom=${containerRect.bottom}`);
-    console.log(`滚动偏移: scrollX=${scrollX}, scrollY=${scrollY}`);
-    console.log(`设备像素比: ${devicePixelRatio}`);
-    console.log(`修正后物理渲染区域: (${physicalLeft},${physicalTop + topOffset})-(${physicalRight},${physicalBottom + topOffset})`);
-
     try {
       await RtspView.startPull({
         url: this.rtspUrl,
@@ -159,16 +159,34 @@ export class KmRtspComponent implements OnInit {
           bottom: physicalBottom + topOffset
         },
         devicePixelRatio: devicePixelRatio
-
       });
 
-      console.log(this.domInfo, '++++this.domInfo')
       this.isStreaming = true;
     } catch (error) {
       console.error('启动RTSP流失败', error);
-
     }
-  };
+  }
+
+  // 等待容器元素渲染完成的辅助方法
+  private async waitForContainer(): Promise<void> {
+    return new Promise((resolve) => {
+      const checkContainer = () => {
+        const container = document.getElementById("rtsp-wrap");
+        if (container) {
+          const rect = container.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            resolve();
+            return;
+          }
+        }
+        
+        // 如果容器还没有准备好，继续等待
+        setTimeout(checkContainer, 100);
+      };
+      
+      checkContainer();
+    });
+  }
   async startSaveMp4() {
     if (this.isStartRecordVideo) {
       return;
@@ -196,12 +214,9 @@ export class KmRtspComponent implements OnInit {
           this.formatTime(seconds);
       }, 1000);
       this.isStartRecordVideo = true;
-      console.log(result, '++=result')
     } catch (error) {
-      console.error('失败', error);
+      console.error('录制失败', error);
     }
-
-
   }
   formatTime(value) {
     return value < 10 ? '0' + value : value;
@@ -252,7 +267,6 @@ export class KmRtspComponent implements OnInit {
     const filePath = '/storage/emulated/0/Download' + '/'
 
     this.baseFilePath = filePath;
-    console.log(filePath, '+++filePath----init')
   }
   ngOnDestroy() {
     this.isStreaming && this.stopStream()

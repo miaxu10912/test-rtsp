@@ -33,6 +33,9 @@ public class MainActivity extends BridgeActivity {
     registerPlugin(com.mycompany.plugins.example.RtspPlugin.class);
     // 检查并请求必要的权限
         checkAndRequestPermissions();
+        
+        // 创建RTSP视频保存目录
+        createRtspVideoDirectory();
 
     this.bridge.setWebViewClient(new BridgeWebViewClient(this.bridge) {
       @Override
@@ -85,6 +88,37 @@ public class MainActivity extends BridgeActivity {
                     break;
                 }
             }         
+        }
+    }
+    
+    /**
+     * 创建RTSP视频保存目录
+     */
+    private void createRtspVideoDirectory() {
+        try {
+            // 尝试在外部存储创建目录
+            File rtspDir = new File(Environment.getExternalStorageDirectory(), "rtsp_videos");
+            if (!rtspDir.exists()) {
+                boolean created = rtspDir.mkdirs();
+                if (created) {
+                    android.util.Log.i("MainActivity", "RTSP视频目录创建成功: " + rtspDir.getAbsolutePath());
+                } else {
+                    android.util.Log.w("MainActivity", "RTSP视频目录创建失败: " + rtspDir.getAbsolutePath());
+                }
+            } else {
+                android.util.Log.i("MainActivity", "RTSP视频目录已存在: " + rtspDir.getAbsolutePath());
+            }
+            
+            // 同时在应用专属目录创建备用目录
+            File appRtspDir = new File(getExternalFilesDir(null), "rtsp_videos");
+            if (!appRtspDir.exists()) {
+                boolean created = appRtspDir.mkdirs();
+                if (created) {
+                    android.util.Log.i("MainActivity", "应用专属RTSP目录创建成功: " + appRtspDir.getAbsolutePath());
+                }
+            }
+        } catch (Exception e) {
+            android.util.Log.e("MainActivity", "创建RTSP目录时发生错误", e);
         }
     }
 
