@@ -87,7 +87,15 @@ public class MainActivity extends BridgeActivity {
                     allGranted = false;
                     break;
                 }
-            }         
+            }
+            
+            if (allGranted) {
+                // 权限授予后，重新创建目录
+                createRtspVideoDirectory();
+                android.util.Log.i("MainActivity", "存储权限已授予，重新创建目录");
+            } else {
+                android.util.Log.w("MainActivity", "存储权限被拒绝");
+            }
         }
     }
     
@@ -96,29 +104,36 @@ public class MainActivity extends BridgeActivity {
      */
     private void createRtspVideoDirectory() {
         try {
-            // 尝试在外部存储创建目录
-            File rtspDir = new File(Environment.getExternalStorageDirectory(), "rtsp_videos");
-            if (!rtspDir.exists()) {
-                boolean created = rtspDir.mkdirs();
-                if (created) {
-                    android.util.Log.i("MainActivity", "RTSP视频目录创建成功: " + rtspDir.getAbsolutePath());
+            // 创建多个可能需要的目录
+            File[] directories = {
+                new File(Environment.getExternalStorageDirectory(), "rtsp_videos"),
+                new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "spdVirtual"),
+                new File(getExternalFilesDir(null), "rtsp_videos"),
+                new File(getExternalFilesDir(null), "spdVirtual")
+            };
+            
+            for (File dir : directories) {
+                if (!dir.exists()) {
+                    boolean created = dir.mkdirs();
+                    if (created) {
+                        android.util.Log.i("MainActivity", "目录创建成功: " + dir.getAbsolutePath());
+                    } else {
+                        android.util.Log.w("MainActivity", "目录创建失败: " + dir.getAbsolutePath());
+                    }
                 } else {
-                    android.util.Log.w("MainActivity", "RTSP视频目录创建失败: " + rtspDir.getAbsolutePath());
+                    android.util.Log.i("MainActivity", "目录已存在: " + dir.getAbsolutePath());
                 }
-            } else {
-                android.util.Log.i("MainActivity", "RTSP视频目录已存在: " + rtspDir.getAbsolutePath());
             }
             
-            // 同时在应用专属目录创建备用目录
-            File appRtspDir = new File(getExternalFilesDir(null), "rtsp_videos");
-            if (!appRtspDir.exists()) {
-                boolean created = appRtspDir.mkdirs();
-                if (created) {
-                    android.util.Log.i("MainActivity", "应用专属RTSP目录创建成功: " + appRtspDir.getAbsolutePath());
-                }
+            // 特别确保Download/spdVirtual目录存在
+            File downloadSpdDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "spdVirtual");
+            if (!downloadSpdDir.exists()) {
+                boolean success = downloadSpdDir.mkdirs();
+                android.util.Log.i("MainActivity", "Download/spdVirtual目录创建" + (success ? "成功" : "失败") + ": " + downloadSpdDir.getAbsolutePath());
             }
+            
         } catch (Exception e) {
-            android.util.Log.e("MainActivity", "创建RTSP目录时发生错误", e);
+            android.util.Log.e("MainActivity", "创建目录时发生错误", e);
         }
     }
 
@@ -130,7 +145,8 @@ public class MainActivity extends BridgeActivity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 if (Environment.isExternalStorageManager()) {
                     // 权限已授予，创建目录
-   
+                    createRtspVideoDirectory();
+                    android.util.Log.i("MainActivity", "管理所有文件权限已授予，重新创建目录");
                 } else {
                     // 权限被拒绝，可以显示提示或者其他处理
                     android.util.Log.e("MainActivity", "管理所有文件权限被拒绝");

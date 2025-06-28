@@ -3,67 +3,209 @@
   height: 100%;
   position: relative;
   background-color: transparent; /* 设置为透明，让native view显示 */
+  
   .camera-wrap {
     width: 100%;
-    height: calc(100% - 12vw);
+    height: 100%;
     box-sizing: border-box;
     background-color: transparent; /* 视频容器也设置为透明 */
+    position: relative;
+    overflow: hidden;
   }
 }
-.camera-btn-wrap {
-  width: 100%;
-  height: 60px;
-  margin-top: 16px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 
-  .btn {
-    position: absolute;
-    display: inline-block;
-    background: #2580fb;
-    font-size: pxToVw(34px);
-    font-weight: 400px;
-    color: #fff;
-    padding: 8px;
-    border-radius: 10px;
-    width: fit-content;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 5px;
-    bottom: 0;
-    z-index: 99999999 !important;
+/* 🎯 视频状态指示器 - 参考原始工程设计 */
+.video-status-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1;
+  
+  .status-subtitle {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 5px;
   }
 }
-.centerBtn {
+
+/* 🎮 悬浮控制按钮区域 - 完全参考原始工程 */
+.overlay-controls {
   position: absolute;
+  bottom: 15px;
   left: 50%;
-  width: 10vw;
-  height: 10vw;
-  bottom: 4vw;
-  transform: translate(-50%);
-  cursor: pointer;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
 }
-.timer {
-  position: absolute;
-  left: 50%;
-  width: 13vw;
-  bottom: 0vw;
-  text-align: center;
-  transform: translate(-50%);
-  cursor: pointer;
-  background: #fd1717;
-  border-radius: 2px;
+
+.control-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 按钮基础样式 - 复制原始工程的设计 */
+.control-btn {
   color: white;
-  padding: 0 4px;
-}
-.changeType {
-  position: absolute;
-  left: 16px;
-  width: 120px;
-  height: 8vw;
-  bottom: 4vw;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 15px;
   cursor: pointer;
+  font-size: 11px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.2s;
+  font-weight: 500;
+  min-width: 80px;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+/* 具体按钮颜色 - 参考原始工程配色 */
+.start-btn {
+  background-color: rgba(220, 53, 69, 0.9); /* 红色 - 开始拉流 */
+}
+
+.stop-btn {
+  background-color: rgba(108, 117, 125, 0.9); /* 灰色 - 停止拉流 */
+}
+
+.photo-btn {
+  background-color: rgba(76, 175, 80, 0.9); /* 绿色 - 拍照 */
+}
+
+.record-btn {
+  background-color: rgba(76, 175, 80, 0.9); /* 绿色 - 开始录制 */
+}
+
+.stop-record-btn {
+  background-color: rgba(220, 53, 69, 0.9); /* 红色 - 停止录制 */
+}
+
+/* 录制时间显示 - 参考原始工程 */
+.record-timer {
+  background-color: rgba(255, 0, 0, 0.9);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+// 自动测试控制按钮样式
+.test-controls {
+  margin-top: 8px;
+  gap: 8px;
+
+  .test-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    
+    &:disabled {
+      background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+
+  .stop-test-btn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    }
+  }
+}
+
+// 测试进度显示样式
+.test-progress {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    
+    span {
+      color: #e2e8f0;
+      font-size: 11px;
+      font-weight: 500;
+      background: rgba(59, 130, 246, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+  }
+  
+  .progress-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    
+    span {
+      color: #f1f5f9;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 2px 4px;
+      border-radius: 3px;
+      
+      &:nth-child(1) {
+        background: rgba(34, 197, 94, 0.2);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+      }
+      
+      &:nth-child(2) {
+        background: rgba(239, 68, 68, 0.2);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+      }
+      
+      &:nth-child(3) {
+        background: rgba(168, 85, 247, 0.2);
+        border: 1px solid rgba(168, 85, 247, 0.3);
+      }
+    }
+  }
 }

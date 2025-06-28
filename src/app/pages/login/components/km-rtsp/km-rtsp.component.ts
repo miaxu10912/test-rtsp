@@ -27,6 +27,25 @@ interface CameraEmit {
   type: EmitType;
   fileName?: string;
 }
+
+// 测试统计信息接口
+interface TestStats {
+  totalOperations: number;
+  successfulOperations: number;
+  failedOperations: number;
+  startTime: number | null;
+  pullSuccess: number;
+  pullFailed: number;
+  jpgSuccess: number;
+  jpgFailed: number;
+  mp4StartSuccess: number;
+  mp4StartFailed: number;
+  mp4StopSuccess: number;
+  mp4StopFailed: number;
+  stopPullSuccess: number;
+  stopPullFailed: number;
+}
+
 @Component({
   selector: 'app-km-rtsp',
   templateUrl: './km-rtsp.component.html',
@@ -50,6 +69,33 @@ export class KmRtspComponent implements OnInit {
   showTime = '00:00:00';
   startTime = null;
   baseFilePath = '';
+
+  // 自动测试相关属性
+  isTestModeRunning = false;
+  currentBigCycle = 0;
+  currentSubCycle = 0;
+  totalBigCycles = 10;
+  totalSubCycles = 10;
+  testAborted = false;
+  
+  // 测试统计信息
+  testStats: TestStats = {
+    totalOperations: 0,
+    successfulOperations: 0,
+    failedOperations: 0,
+    startTime: null,
+    pullSuccess: 0,
+    pullFailed: 0,
+    jpgSuccess: 0,
+    jpgFailed: 0,
+    mp4StartSuccess: 0,
+    mp4StartFailed: 0,
+    mp4StopSuccess: 0,
+    mp4StopFailed: 0,
+    stopPullSuccess: 0,
+    stopPullFailed: 0
+  };
+
   constructor(private commonSer: CommonService,) {
 
 
@@ -60,6 +106,15 @@ export class KmRtspComponent implements OnInit {
     }
   }
   ngOnInit() { }
+
+  // 🎮 对应HTML模板中的按钮方法
+  async startPull() {
+    await this.startStream();
+  }
+
+  async stopPull() {
+    await this.stopStream();
+  }
   changePage(e: any) {
     if (this.isStartRecordVideo) {
       this.commonSer.showToast('正在录制中');
@@ -271,5 +326,256 @@ export class KmRtspComponent implements OnInit {
   ngOnDestroy() {
     this.isStreaming && this.stopStream()
     this.timer && clearInterval(this.timer)
+  }
+
+  // ==================== 自动测试功能 ====================
+  
+  // 开始自动测试
+  async startAutoTest() {
+    if (this.isTestModeRunning) {
+      this.commonSer.showToast('⚠️ 测试模式已在运行中，请等待完成');
+      return;
+    }
+    
+    this.isTestModeRunning = true;
+    this.currentBigCycle = 0;
+    this.currentSubCycle = 0;
+    this.testAborted = false;
+    
+    // 重置统计信息
+    this.testStats = {
+      totalOperations: 0,
+      successfulOperations: 0,
+      failedOperations: 0,
+      startTime: Date.now(),
+      pullSuccess: 0,
+      pullFailed: 0,
+      jpgSuccess: 0,
+      jpgFailed: 0,
+      mp4StartSuccess: 0,
+      mp4StartFailed: 0,
+      mp4StopSuccess: 0,
+      mp4StopFailed: 0,
+      stopPullSuccess: 0,
+      stopPullFailed: 0
+    };
+    
+    console.log("🧪 ========== 自动测试开始 ==========");
+    console.log("📊 测试计划: 10个大循环 × 10个小循环 = 100次完整测试");
+    console.log("🎯 每次测试包含: 拉流→JPG保存→MP4录制→停止录制");
+    console.log("⏰ 开始时间:", new Date().toLocaleString());
+    console.log("=======================================\n");
+    
+    this.commonSer.showToast('🧪 自动测试开始，请查看控制台日志');
+    
+    try {
+      await this.runAutoTest();
+    } catch (error) {
+      console.error('❌ 自动测试出错:', error);
+      this.commonSer.showToast('❌ 自动测试出错');
+    } finally {
+      this.isTestModeRunning = false;
+      this.currentBigCycle = 0;
+      this.currentSubCycle = 0;
+    }
+  }
+
+  // 停止自动测试
+  async stopAutoTest() {
+    this.testAborted = true;
+    this.isTestModeRunning = false;
+    this.currentBigCycle = 0;
+    this.currentSubCycle = 0;
+    
+    // 确保停止拉流
+    if (this.isStreaming) {
+      await this.stopStream();
+    }
+    
+    // 确保停止录制
+    if (this.isStartRecordVideo) {
+      await this.stopRecordMp4();
+    }
+    
+    console.log("❌ 自动测试已手动停止");
+    this.commonSer.showToast('❌ 自动测试已停止');
+  }
+
+  // 执行自动测试的主要逻辑
+  private async runAutoTest() {
+    // 大循环：执行10次
+    for (let bigCycle = 1; bigCycle <= this.totalBigCycles; bigCycle++) {
+      if (this.testAborted) break;
+      
+      this.currentBigCycle = bigCycle;
+      console.log(`\n🔄 ╔════ 大循环 ${bigCycle}/${this.totalBigCycles} 开始 ════╗`);
+      
+      // 开始拉流
+      console.log(`📺 [大循环${bigCycle}] 步骤1: 开始拉流...`);
+      const pullStartTime = Date.now();
+      
+      try {
+        await this.startStream();
+        const pullDuration = Date.now() - pullStartTime;
+        this.testStats.pullSuccess++;
+        this.testStats.successfulOperations++;
+        console.log(`✅ [大循环${bigCycle}] 拉流成功 (耗时: ${pullDuration}ms)`);
+      } catch (error) {
+        const pullDuration = Date.now() - pullStartTime;
+        this.testStats.pullFailed++;
+        this.testStats.failedOperations++;
+        console.log(`❌ [大循环${bigCycle}] 拉流失败 (耗时: ${pullDuration}ms, 错误: ${error.message})`);
+      }
+      this.testStats.totalOperations++;
+      
+      await this.sleep(2000); // 等待2秒让拉流稳定
+      console.log(`⏱️ [大循环${bigCycle}] 拉流稳定等待完成 (2秒)`);
+      
+      // 小循环：执行10次
+      for (let subCycle = 1; subCycle <= this.totalSubCycles; subCycle++) {
+        if (this.testAborted) break;
+        
+        this.currentSubCycle = subCycle;
+        console.log(`\n  🔄 ╟─── 大循环${bigCycle} - 小循环 ${subCycle}/${this.totalSubCycles} 开始 ───╢`);
+        
+        // 等待5秒
+        console.log(`  ⏱️ [${bigCycle}-${subCycle}] 步骤1: 等待5秒...`);
+        await this.sleep(5000);
+        
+        // 保存JPG
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+        console.log(`  📷 [${bigCycle}-${subCycle}] 步骤2: 保存JPG`);
+        
+        const jpgStartTime = Date.now();
+        try {
+          await this.takeSnapshot();
+          const jpgDuration = Date.now() - jpgStartTime;
+          this.testStats.jpgSuccess++;
+          this.testStats.successfulOperations++;
+          console.log(`  ✅ [${bigCycle}-${subCycle}] JPG保存成功 (耗时: ${jpgDuration}ms)`);
+        } catch (error) {
+          const jpgDuration = Date.now() - jpgStartTime;
+          this.testStats.jpgFailed++;
+          this.testStats.failedOperations++;
+          console.log(`  ❌ [${bigCycle}-${subCycle}] JPG保存失败 (耗时: ${jpgDuration}ms, 错误: ${error.message})`);
+        }
+        this.testStats.totalOperations++;
+        
+        // 等待5秒
+        console.log(`  ⏱️ [${bigCycle}-${subCycle}] 步骤3: 等待5秒...`);
+        await this.sleep(5000);
+        
+        // 开始录制MP4
+        console.log(`  🎬 [${bigCycle}-${subCycle}] 步骤4: 开始录制MP4`);
+        
+        const mp4StartTime = Date.now();
+        try {
+          await this.startSaveMp4();
+          const mp4StartDuration = Date.now() - mp4StartTime;
+          this.testStats.mp4StartSuccess++;
+          this.testStats.successfulOperations++;
+          console.log(`  ✅ [${bigCycle}-${subCycle}] MP4录制开始成功 (耗时: ${mp4StartDuration}ms)`);
+        } catch (error) {
+          const mp4StartDuration = Date.now() - mp4StartTime;
+          this.testStats.mp4StartFailed++;
+          this.testStats.failedOperations++;
+          console.log(`  ❌ [${bigCycle}-${subCycle}] MP4录制开始失败 (耗时: ${mp4StartDuration}ms, 错误: ${error.message})`);
+        }
+        this.testStats.totalOperations++;
+        
+        // 录制2秒
+        console.log(`  ⏱️ [${bigCycle}-${subCycle}] 步骤5: 录制2秒...`);
+        await this.sleep(2000);
+        
+        // 停止录制
+        console.log(`  ⏹️ [${bigCycle}-${subCycle}] 步骤6: 停止录制`);
+        const mp4StopTime = Date.now();
+        try {
+          await this.stopRecordMp4();
+          const mp4StopDuration = Date.now() - mp4StopTime;
+          this.testStats.mp4StopSuccess++;
+          this.testStats.successfulOperations++;
+          console.log(`  ✅ [${bigCycle}-${subCycle}] MP4录制停止成功 (耗时: ${mp4StopDuration}ms)`);
+        } catch (error) {
+          const mp4StopDuration = Date.now() - mp4StopTime;
+          this.testStats.mp4StopFailed++;
+          this.testStats.failedOperations++;
+          console.log(`  ❌ [${bigCycle}-${subCycle}] MP4录制停止失败 (耗时: ${mp4StopDuration}ms, 错误: ${error.message})`);
+        }
+        this.testStats.totalOperations++;
+        
+        // 打印小循环统计
+        const successRate = this.getSuccessRate();
+        console.log(`  📊 [${bigCycle}-${subCycle}] 小循环完成 - 当前成功率: ${successRate}% (${this.testStats.successfulOperations}/${this.testStats.totalOperations})`);
+      }
+      
+      if (this.testAborted) break;
+      
+      // 等待2秒
+      console.log(`⏱️ [大循环${bigCycle}] 大循环完成，等待2秒...`);
+      await this.sleep(2000);
+      
+      // 停止拉流
+      console.log(`📺 [大循环${bigCycle}] 最终步骤: 停止拉流`);
+      const stopPullTime = Date.now();
+      try {
+        await this.stopStream();
+        const stopPullDuration = Date.now() - stopPullTime;
+        this.testStats.stopPullSuccess++;
+        this.testStats.successfulOperations++;
+        console.log(`✅ [大循环${bigCycle}] 停止拉流成功 (耗时: ${stopPullDuration}ms)`);
+      } catch (error) {
+        const stopPullDuration = Date.now() - stopPullTime;
+        this.testStats.stopPullFailed++;
+        this.testStats.failedOperations++;
+        console.log(`❌ [大循环${bigCycle}] 停止拉流失败 (耗时: ${stopPullDuration}ms, 错误: ${error.message})`);
+      }
+      this.testStats.totalOperations++;
+      
+      // 等待2秒
+      await this.sleep(2000);
+      
+      // 打印大循环统计
+      const currentSuccessRate = this.getSuccessRate();
+      const elapsedTime = ((Date.now() - this.testStats.startTime!) / 1000 / 60).toFixed(1);
+      console.log(`✅ ╚════ 大循环 ${bigCycle}/${this.totalBigCycles} 完成 ════╝`);
+      console.log(`📈 当前统计: 成功率${currentSuccessRate}%, 已用时${elapsedTime}分钟`);
+      console.log(`📊 操作统计: 拉流${this.testStats.pullSuccess}/${this.testStats.pullSuccess + this.testStats.pullFailed}, JPG${this.testStats.jpgSuccess}/${this.testStats.jpgSuccess + this.testStats.jpgFailed}, MP4开始${this.testStats.mp4StartSuccess}/${this.testStats.mp4StartSuccess + this.testStats.mp4StartFailed}, MP4停止${this.testStats.mp4StopSuccess}/${this.testStats.mp4StopSuccess + this.testStats.mp4StopFailed}, 停止拉流${this.testStats.stopPullSuccess}/${this.testStats.stopPullSuccess + this.testStats.stopPullFailed}\n`);
+    }
+    
+    // 最终统计报告
+    if (!this.testAborted) {
+      const totalTime = ((Date.now() - this.testStats.startTime!) / 1000 / 60).toFixed(1);
+      const finalSuccessRate = this.getSuccessRate();
+      
+      console.log("\n🎉 ========== 自动测试完成 ==========");
+      console.log("⏰ 结束时间:", new Date().toLocaleString());
+      console.log("⏱️ 总耗时:", totalTime + "分钟");
+      console.log("📊 总体成功率:", finalSuccessRate + "%");
+      console.log("📈 操作统计:");
+      console.log(`   • 总操作数: ${this.testStats.totalOperations}`);
+      console.log(`   • 成功操作: ${this.testStats.successfulOperations}`);
+      console.log(`   • 失败操作: ${this.testStats.failedOperations}`);
+      console.log("📋 详细统计:");
+      console.log(`   • 开始拉流: ${this.testStats.pullSuccess}成功/${this.testStats.pullFailed}失败`);
+      console.log(`   • JPG保存: ${this.testStats.jpgSuccess}成功/${this.testStats.jpgFailed}失败`);
+      console.log(`   • MP4开始: ${this.testStats.mp4StartSuccess}成功/${this.testStats.mp4StartFailed}失败`);
+      console.log(`   • MP4停止: ${this.testStats.mp4StopSuccess}成功/${this.testStats.mp4StopFailed}失败`);
+      console.log(`   • 停止拉流: ${this.testStats.stopPullSuccess}成功/${this.testStats.stopPullFailed}失败`);
+      console.log("=====================================");
+      
+      this.commonSer.showToast(`🎉 自动测试完成！成功率: ${finalSuccessRate}%`);
+    }
+  }
+
+  // 获取成功率
+  getSuccessRate(): string {
+    if (this.testStats.totalOperations === 0) return '0.0';
+    return ((this.testStats.successfulOperations / this.testStats.totalOperations) * 100).toFixed(1);
+  }
+
+  // 等待指定时间的辅助方法
+  private sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
