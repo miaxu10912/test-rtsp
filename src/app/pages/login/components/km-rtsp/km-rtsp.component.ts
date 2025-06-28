@@ -57,7 +57,7 @@ export class KmRtspComponent implements OnInit {
   async ngOnChanges(changes: SimpleChanges) {
     console.log(this.rtspSetting, '+++rtspSettingrtsp')
     if (this.rtspSetting) {
-      this.rtspUrl = `rtsp://${this.rtspSetting.rtspIp}/live`
+      this.rtspUrl = `rtsp://${this.rtspSetting.rtspIp}/live/camera`
     }
   }
   ngOnInit() { }

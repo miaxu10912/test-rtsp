@@ -10,7 +10,7 @@ import { NavController, Platform } from '@ionic/angular';
 export class LoginPage implements OnInit {
   rtspSettings = {
     fps: 30,
-    rtspIp: '192.168.137.31',
+    rtspIp: '192.168.82.22',
     resolvingPower: '1080p',
     width: 1920,
     height: 1080
