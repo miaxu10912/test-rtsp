@@ -27,3 +27,16 @@
 
 /* 引用全局样式 */
 @import "./style/common.scss";
+
+/* 设置全局透明背景，让native view显示 */
+html, body {
+  background-color: transparent !important;
+}
+
+ion-app {
+  background-color: transparent !important;
+}
+
+ion-page {
+  background-color: transparent !important;
+}

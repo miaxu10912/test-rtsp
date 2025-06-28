@@ -1,5 +1,5 @@
 ion-content {
-  --background: none;
+  --background: transparent;
 }
 .main-content {
   width: 100%;
@@ -7,9 +7,14 @@ ion-content {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border: 1px solid;
   overflow: hidden;
-  div {
+  background-color: transparent;
+  .top-wrap {
     flex: 1;
+    background-color: transparent;
+  }
+  .bottom-wrap {
+    flex: 1;
+    background-color: transparent;
   }
 }
