@@ -1,31 +1,61 @@
 <div class="main-wrap">
-  <div class="camera-wrap" id="rtsp-wrap"></div>
-  <div class="camera-btn-wrap">
-    <img
-      src="assets/imgs/camera/icon-changeVideo.png"
-      class="changeType"
-      (click)="changePage($event)"
-    />
-    <img
-      src="assets/imgs/camera/icon-takePhoto.png"
-      (click)="takeSnapshot()"
-      class="centerBtn"
-      *ngIf="currentPage === 1"
-    />
-    <img
-      src="assets/imgs/camera/icon-startVideo.png"
-      (click)="startSaveMp4()"
-      class="centerBtn"
-      *ngIf="currentPage === 2 && !isStartRecordVideo"
-    />
-    <img
-      src="assets/imgs/camera/icon-stopVideo.png"
-      (click)="stopRecordMp4()"
-      class="centerBtn"
-      *ngIf="currentPage === 2 && isStartRecordVideo"
-    />
-    <div class="timer" *ngIf="currentPage === 2">{{ showTime }}</div>
-    <!-- <div class="btn" (click)="startLoopFrameExtraction()">开抽帧</div>
-    <div class="btn" (click)="stopLoopFrameExtraction()">停止抽帧</div> -->
+  <div class="camera-wrap" id="rtsp-wrap">
+    
+    <!-- 视频状态指示器 -->
+    <div class="video-status-indicator" [style.display]="isStreaming ? 'none' : 'block'">
+      <div>📺 RTSP视频区域</div>
+      <div class="status-subtitle">Native View 渲染</div>
+    </div>
+    
+    <!-- LIVE指示器 -->
+    <div class="live-indicator" *ngIf="isStreaming">
+      🔴 LIVE
+    </div>
+    
+    <!-- 悬浮控制按钮区域 -->
+    <div class="overlay-controls">
+      <!-- 拉流控制按钮 -->
+      <div class="control-row">
+        <button 
+          class="control-btn start-btn" 
+          (click)="startStream()" 
+          [disabled]="isStreaming">
+          ▶️ 开始拉流
+        </button>
+        <button 
+          class="control-btn stop-btn" 
+          (click)="stopStream()" 
+          [disabled]="!isStreaming">
+          ⏹️ 停止拉流
+        </button>
+      </div>
+      
+      <!-- 录制功能按钮 -->
+      <div class="control-row" *ngIf="isStreaming">
+        <button 
+          class="control-btn photo-btn" 
+          (click)="takeSnapshot()">
+          📷 拍照
+        </button>
+        <button 
+          class="control-btn record-btn" 
+          (click)="startSaveMp4()"
+          *ngIf="!isStartRecordVideo">
+          🎬 开始录制
+        </button>
+        <button 
+          class="control-btn stop-record-btn" 
+          (click)="stopRecordMp4()"
+          *ngIf="isStartRecordVideo">
+          ⏹️ 停止录制
+        </button>
+      </div>
+      
+      <!-- 录制时间显示 -->
+      <div class="record-timer" *ngIf="isStartRecordVideo">
+        {{ showTime }}
+      </div>
+    </div>
+    
   </div>
 </div>

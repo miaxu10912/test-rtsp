@@ -240,7 +240,7 @@ export class KmRtspComponent implements OnInit {
     this.baseFilePath = filePath;
     console.log(filePath, '+++filePath----init')
     
-    // 延迟获取容器尺寸和启动流
+    // 延迟获取容器尺寸，但不自动启动流
     setTimeout(() => {
       const cameraWrap = document.getElementById('rtsp-wrap');
       if (cameraWrap) {
@@ -255,9 +255,8 @@ export class KmRtspComponent implements OnInit {
         }
         console.log('容器尺寸:', width, 'x', height, '位置:', rect.x, rect.y);
         
-        // 确保容器有尺寸后再启动流
         if (width > 0 && height > 0) {
-          this.startStream();
+          console.log('容器尺寸正常，等待用户手动开始拉流');
         } else {
           console.error('容器尺寸无效:', width, height);
         }

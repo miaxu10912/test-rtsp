@@ -13,60 +13,117 @@
     overflow: hidden;
   }
 }
-.camera-btn-wrap {
-  width: 100%;
-  height: 60px;
-  margin-top: 16px;
+/* 视频状态指示器 */
+.video-status-indicator {
   position: absolute;
-  bottom: 0;
-  left: 0;
-
-  .btn {
-    position: absolute;
-    display: inline-block;
-    background: #2580fb;
-    font-size: pxToVw(34px);
-    font-weight: 400px;
-    color: #fff;
-    padding: 8px;
-    border-radius: 10px;
-    width: fit-content;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 5px;
-    bottom: 0;
-    z-index: 99999999 !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1;
+  
+  .status-subtitle {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 5px;
   }
 }
-.centerBtn {
+
+/* LIVE指示器 */
+.live-indicator {
   position: absolute;
-  left: 50%;
-  width: 10vw;
-  height: 10vw;
-  bottom: 4vw;
-  transform: translate(-50%);
-  cursor: pointer;
-}
-.timer {
-  position: absolute;
-  left: 50%;
-  width: 13vw;
-  bottom: 0vw;
-  text-align: center;
-  transform: translate(-50%);
-  cursor: pointer;
-  background: #fd1717;
-  border-radius: 2px;
+  top: 8px;
+  right: 8px;
+  background: rgba(220, 53, 69, 0.9);
   color: white;
-  padding: 0 4px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-.changeType {
+
+/* 悬浮控制按钮区域 */
+.overlay-controls {
   position: absolute;
-  left: 16px;
-  width: 120px;
-  height: 8vw;
-  bottom: 4vw;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.control-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 按钮基础样式 */
+.control-btn {
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 15px;
   cursor: pointer;
+  font-size: 11px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.2s;
+  font-weight: 500;
+  min-width: 80px;
+  
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+  
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+/* 具体按钮颜色 */
+.start-btn {
+  background-color: rgba(220, 53, 69, 0.9); /* 红色 - 开始拉流 */
+}
+
+.stop-btn {
+  background-color: rgba(108, 117, 125, 0.9); /* 灰色 - 停止拉流 */
+}
+
+.photo-btn {
+  background-color: rgba(76, 175, 80, 0.9); /* 绿色 - 拍照 */
+}
+
+.record-btn {
+  background-color: rgba(76, 175, 80, 0.9); /* 绿色 - 开始录制 */
+}
+
+.stop-record-btn {
+  background-color: rgba(220, 53, 69, 0.9); /* 红色 - 停止录制 */
+}
+
+/* 录制时间显示 */
+.record-timer {
+  background-color: rgba(255, 0, 0, 0.9);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
