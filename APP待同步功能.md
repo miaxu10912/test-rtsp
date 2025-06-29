@@ -34,3 +34,14 @@ UI设计：https://lanhuapp.com/web/#/item/project/stage?tid=996c0ab2-82a6-4fbb-
   - 扫标签（光缆芯扫描有问题，需要同步web） --已修改，但需要核对【对接后端：龚博鑫】（web：交互已修改，但后端还未修改接口，如果后续接口有变动，app也需要修改）
 
 四、模型校验（改名称）--> 图纸审核(内部功能暂时不需要更新)
+
+
+0、设置国外npm地址，删除之前的lib 和build.gradle内容
+1、npm uninstall kaimo_rtsp_plugin --force
+2、npm install kaimo_rtsp_plugin --force 
+3、npm run build
+4、npx cap sync android 
+5、android studio ，gradle  buildtool ->java设置为17
+6、/Users/olaola/Desktop/tmp/ionic6test/testmerge/test-rtsp/android/app/libs 在app这个目录创建libs，并将
+npm_modules的lib拷贝到这个目录（android libs 自动加载目录）
+7、

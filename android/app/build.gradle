@@ -14,10 +14,7 @@ android {
              // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
-        // 仅支持arm64-v8a架构
-        ndk {
-            abiFilters 'arm64-v8a'
-        }
+    
     }
     buildTypes {
         release {
@@ -27,26 +24,6 @@ android {
         }
     }
 
-    //   // 确保生成的so库包含在apk中
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['src/main/jniLibs']
-        }
-    }
-    
-    // // 处理重复的库文件
-    packagingOptions {
-        pickFirst 'lib/*/librtsp_jni.so'
-        pickFirst 'lib/*/libavformat.so'
-        pickFirst 'lib/*/libavcodec.so'
-        pickFirst 'lib/*/libavutil.so'
-        pickFirst 'lib/*/libswscale.so'
-        pickFirst 'lib/*/libswresample.so'
-        pickFirst 'lib/*/libavfilter.so'
-        pickFirst 'lib/*/libavdevice.so'
-        pickFirst 'lib/*/libpostproc.so'
-        pickFirst 'lib/*/libc++_shared.so'
-    }
   
 }
 

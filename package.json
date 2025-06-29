@@ -70,7 +70,7 @@
     "hammerjs": "^2.0.8",
     "ionicons": "^6.0.3",
     "js-base64": "^3.7.7",
-    "kaimo_rtsp_plugin": "^0.0.26",
+    "kaimo_rtsp_plugin": "^0.0.32",
     "localforage": "^1.10.0",
     "ng2-pdf-viewer": "^9.1.3",
     "panzoom": "^9.4.3",
