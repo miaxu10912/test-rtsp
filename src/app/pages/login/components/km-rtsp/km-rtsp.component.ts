@@ -57,7 +57,7 @@ export class KmRtspComponent implements OnInit {
   async ngOnChanges(changes: SimpleChanges) {
     console.log(this.rtspSetting, '+++rtspSettingrtsp')
     if (this.rtspSetting) {
-      this.rtspUrl = `rtsp://${this.rtspSetting.rtspIp}/live`
+      this.rtspUrl = `rtsp://${this.rtspSetting.rtspIp}/live/camera`
     }
   }
   ngOnInit() { }
@@ -236,23 +236,33 @@ export class KmRtspComponent implements OnInit {
   }
   stopLoopFrameExtraction() { }
   ngAfterViewInit() {
-    this.startStream();
-    const cameraWrap = document.getElementById('rtsp-wrap');
-    if (cameraWrap) {
-      const width = cameraWrap.clientWidth;  // 内容宽度
-      const height = cameraWrap.clientHeight; // 内容高度
-      const rect = cameraWrap.getBoundingClientRect();
-      this.domInfo = {
-        width: width,
-        height: height,
-        x: rect.x,
-        y: rect.y
-      }
-    }
     const filePath = '/storage/emulated/0/Download' + '/'
-
     this.baseFilePath = filePath;
     console.log(filePath, '+++filePath----init')
+    
+    // 延迟获取容器尺寸和启动流
+    setTimeout(() => {
+      const cameraWrap = document.getElementById('rtsp-wrap');
+      if (cameraWrap) {
+        const width = cameraWrap.clientWidth;  // 内容宽度
+        const height = cameraWrap.clientHeight; // 内容高度
+        const rect = cameraWrap.getBoundingClientRect();
+        this.domInfo = {
+          width: width,
+          height: height,
+          x: rect.x,
+          y: rect.y
+        }
+        console.log('容器尺寸:', width, 'x', height, '位置:', rect.x, rect.y);
+        
+        // 确保容器有尺寸后再启动流
+        if (width > 0 && height > 0) {
+          this.startStream();
+        } else {
+          console.error('容器尺寸无效:', width, height);
+        }
+      }
+    }, 100);
   }
   ngOnDestroy() {
     this.isStreaming && this.stopStream()

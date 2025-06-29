@@ -27,3 +27,15 @@
 
 /* 引用全局样式 */
 @import "./style/common.scss";
+
+body {
+  background-color: transparent !important;
+}
+
+.ion-app {
+  background-color: transparent !important;
+}
+
+ion-app {
+  background: transparent !important;
+}

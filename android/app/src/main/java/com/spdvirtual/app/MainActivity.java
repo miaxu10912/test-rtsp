@@ -33,6 +33,9 @@ public class MainActivity extends BridgeActivity {
     registerPlugin(com.mycompany.plugins.example.RtspPlugin.class);
     // 检查并请求必要的权限
         checkAndRequestPermissions();
+        
+        // 设置WebView透明 - 在正确的时机
+        configureWebViewForTransparency();
 
     this.bridge.setWebViewClient(new BridgeWebViewClient(this.bridge) {
       @Override
@@ -42,6 +45,36 @@ public class MainActivity extends BridgeActivity {
     });
 
   }
+  
+  /**
+   * 配置WebView透明设置
+   */
+  private void configureWebViewForTransparency() {
+    // 延迟执行，确保WebView已经创建
+    this.runOnUiThread(new Runnable() {
+      @Override
+      public void run() {
+        WebView webView = bridge.getWebView();
+        if (webView != null) {
+          // 设置WebView背景透明
+          webView.setBackgroundColor(0x00000000);
+          // 启用硬件加速（可选，有时有助于透明渲染）
+          webView.setLayerType(WebView.LAYER_TYPE_HARDWARE, null);
+          android.util.Log.i("MainActivity", "WebView透明设置完成");
+        } else {
+          android.util.Log.w("MainActivity", "WebView尚未创建，将在onResume中重试");
+        }
+      }
+    });
+  }
+  
+  @Override
+  public void onResume() {
+    super.onResume();
+    // 在onResume中再次尝试设置WebView透明，确保设置成功
+    configureWebViewForTransparency();
+  }
+  
     private void checkAndRequestPermissions() {
         // 检查并请求存储权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {

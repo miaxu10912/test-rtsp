@@ -42,6 +42,8 @@ UI设计：https://lanhuapp.com/web/#/item/project/stage?tid=996c0ab2-82a6-4fbb-
 3、npm run build
 4、npx cap sync android 
 5、android studio ，gradle  buildtool ->java设置为17
-6、/Users/olaola/Desktop/tmp/ionic6test/testmerge/test-rtsp/android/app/libs 在app这个目录创建libs，并将
+6、/Users/olaola/Desktop/tmp/ionic6test/testmerge/test-rtsp/node_modules/kaimo_rtsp_plugin/libs/rtsp-native-1.0.aar 拷贝到/Users/olaola/Desktop/tmp/ionic6test/testmerge/test-rtsp/android/app/libs 在app这个目录创建libs，并将
 npm_modules的lib拷贝到这个目录（android libs 自动加载目录）
-7、
+7、this.rtspUrl = `rtsp://${this.rtspSetting.rtspIp}/live/` 改为this.rtspUrl = `rtsp://${this.rtspSetting.rtspIp}/live/camera`
+8、修改html为透明,适应自适应渲染
+   

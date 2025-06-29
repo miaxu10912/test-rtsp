@@ -2,11 +2,15 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #000;
+  background-color: transparent; /* 设置为透明，让native view显示 */
+  
   .camera-wrap {
     width: 100%;
-    height: calc(100% - 12vw);
+    height: 100%;
     box-sizing: border-box;
+    background-color: transparent; /* 视频容器也设置为透明 */
+    position: relative;
+    overflow: hidden;
   }
 }
 .camera-btn-wrap {
